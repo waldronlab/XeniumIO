@@ -149,7 +149,7 @@ into R. The `TENxXenium` object is created by specifying the path to the
 `import` method for the `TENxXenium` class.
 
 First, we cache the ~12 MB file to avoid downloading it multiple times (via 
-`r Biocpkg("BiocFileCache")`).
+`r BiocStyle::Biocpkg("BiocFileCache")`).
 
 ```{r}
 zipfile <- paste0(
@@ -210,6 +210,14 @@ completeness.
 
 # Session Info
 
-```{r}
-sessionInfo()
+```{r session-info, echo=FALSE, results='asis'}
+html_output <- paste0(
+    "<details><summary>",
+    "Click to expand <code>sessionInfo()</code>",
+    "</summary>\n\n",
+    "<pre><code>",
+    paste(capture.output(sessionInfo()), collapse = "\n"),
+    "</code></pre>\n</details>"
+)
+cat(html_output)
 ```
