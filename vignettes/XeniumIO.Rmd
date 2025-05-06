@@ -57,10 +57,13 @@ into R.
 |---------------------|---------------|----------------------|
 | .zarr.zip           | TENxZarr      | (TBD)                |
 
-# GitHub Installation
+# Installation
 
 ```{r,eval=FALSE}
-BiocManager::install("Bioconductor/XeniumIO")
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")))
+
+BiocManager::install("XeniumIO")
 ```
 
 # Loading package
